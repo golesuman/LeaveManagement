@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="enabledOnReformat" value="true" />
+    <option name="enabledOnSave" value="true" />
+    <option name="executionMode" value="BINARY" />
+    <option name="pathToExecutable" value="$USER_HOME$/.local/bin/black" />
+    <option name="sdkUUID" value="a3ac3fad-5d69-47b0-82c3-a9fba40c9bc3" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (LeaveManagement)" project-jdk-type="Python SDK" />
+</project>
