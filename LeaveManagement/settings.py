@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # local apps
     "management",
-    
     # third party apps
-    "bootstrap5"
+    "bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -59,8 +58,7 @@ ROOT_URLCONF = "LeaveManagement.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
-        ,
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -85,6 +83,8 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+ALLOWED_HOSTS = ["localhost", "*"]
 
 
 # Password validation
