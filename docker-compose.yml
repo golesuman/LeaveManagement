@@ -2,9 +2,9 @@ version: '3'
 
 services:
   backend:
-    image: leave-backend:0.0.1
+    image: leave-backend-e-gov:0.0.1
     volumes:
-      - ./LeaveManagement:/backend-api
+      - backend_data:/backend-api
     ports:
       - "8000:8000"
     depends_on:
@@ -27,14 +27,22 @@ services:
       - app-network
 
   db:
+    hostname: postgres_db
     image: postgres:latest
+    ports:
+      - "5432:5432"
     environment:
-      - POSTGRES_DB=mydb
-      - POSTGRES_USER=myuser
-      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=my_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
     networks:
       - app-network
+    volumes:
+      - pg_data:/var/lib/postgres/data
 
 networks:
   app-network:
     driver: bridge
+volumes:
+  pg_data:
+  backend_data:
