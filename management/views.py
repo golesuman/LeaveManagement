@@ -30,8 +30,9 @@ class HomeView(View):
                     "all_leaves": all_leaves,
                 },
             )
-        except Employee.DoesNotExist:
-            return render(request, template_name="login.html")
+        except Exception as e:
+            return redirect("login")
+            # return render(request, template_name="login.html")
 
 
 class LoginView(View):
